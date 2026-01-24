@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.name {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.contact-info span {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Section Styles */
+.section {
+    padding: 35px 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #667eea;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-weight: 600;
+}
+
+/* Summary */
+.summary {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Experience Styles */
+.experience-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #667eea;
+    padding-bottom: 25px;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.job-title {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+.job-date {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.company {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.job-description {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job-description li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.job-description li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Education Styles */
+.education-item {
+    padding-left: 20px;
+    border-left: 3px solid #667eea;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.degree {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+.education-date {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.school {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.education-details {
+    color: #555;
+    font-size: 15px;
+}
+
+/* Skills Styles */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category {
+    margin-bottom: 15px;
+}
+
+.skill-category-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+    transition: transform 0.2s;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* Certifications */
+.certifications-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.certifications-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    font-size: 16px;
+}
+
+.certifications-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Profiles */
+.profile-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid #667eea;
+    padding-bottom: 20px;
+}
+
+.profile-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.profile-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.profile-link {
+    font-size: 16px;
+    color: #667eea;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.profile-link a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-link a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.profile-details {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-info span {
+        text-align: center;
+    }
+
+    .section {
+        padding: 25px 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .job-header,
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-title,
+    .degree {
+        font-size: 20px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+}
+/* Internship Styles */
+.internship-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #667eea;
+    padding-bottom: 25px;
+}
+
+.internship-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.internship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.internship-role {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+.internship-date {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.internship-company {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.internship-details {
+    list-style: none;
+    padding-left: 0;
+}
+
+.internship-details li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    font-size: 15px;
+}
+
+.internship-details li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+/* Projects Styles */
+.project-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #667eea;
+    padding-bottom: 25px;
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-title {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+.project-date {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.project-tech {
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.project-details {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-details li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    font-size: 15px;
+}
+
+.project-details li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+.certifications-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.certifications-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    font-size: 16px;
+}
+
+.certifications-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 18px;
+}
+
